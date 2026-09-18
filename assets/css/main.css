@@ -610,3 +610,100 @@ h2 .ts, h3 .ts { font-size: 0.7em; }
     display: none;
   }
 }
+
+/* ============================================================
+   GATEWAY NAVIGATION — HIGHER VISUAL HIERARCHY
+   ============================================================ */
+
+.library-panel {
+  flex: 0 0 auto;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-elevated);
+  padding: 14px;
+}
+
+.library-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.library-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px 8px;
+}
+
+.library-nav a {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.3;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 7px 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  transition:
+    color 0.12s var(--ease),
+    border-color 0.12s var(--ease),
+    background 0.12s var(--ease);
+}
+
+.library-nav a:hover {
+  color: var(--text);
+  border-color: var(--border-strong);
+  background: var(--accent-glow);
+}
+
+.library-nav a.active {
+  color: var(--text);
+  border-color: var(--accent);
+  background: var(--accent-glow);
+  font-weight: 700;
+}
+
+/* Make exercise navigation easier to distinguish from library navigation */
+.toc-panel {
+  border-top: 1px solid var(--border-strong);
+  padding-top: 18px;
+}
+
+.toc-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Stronger page-to-page navigation */
+.gateway-page-nav a {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  padding: 11px 14px;
+  border-color: var(--border-strong);
+  background: var(--bg-elevated);
+  color: var(--text);
+}
+
+.gateway-page-nav a:hover {
+  border-color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.gateway-page-nav .library-home {
+  border: 1px solid var(--accent);
+  background: var(--accent-glow);
+  color: var(--accent);
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.gateway-page-nav .next {
+  justify-content: flex-end;
+}
+
