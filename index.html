@@ -3,217 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Gateway Experience · Wave 1 — Discovery</title>
-  <link rel="stylesheet" href="../assets/css/main.css">
-  <style>
-    /* Audio player overrides for this study (self-hosted audio, no video box) */
-    .player-wrap.audio {
-      aspect-ratio: auto;
-      background: var(--bg-elevated);
-      display: flex;
-      align-items: center;
-      padding: 14px;
-    }
-    .player-wrap.audio audio { width: 100%; }
-    .track {
-      font-family: var(--font-mono);
-      font-size: 0.78em;
-      color: var(--accent);
-      text-decoration: none;
-      padding: 2px 9px;
-      margin-right: 2px;
-      border: 1px solid rgba(123, 158, 255, 0.3);
-      border-radius: 2px;
-      cursor: pointer;
-      background: var(--accent-glow);
-      white-space: nowrap;
-      transition: background 0.12s var(--ease), color 0.12s var(--ease);
-    }
-    .track:hover { background: rgba(123, 158, 255, 0.24); }
-    .track.playing { background: var(--accent); color: var(--bg); }
-    .player-meta .now-track { color: var(--accent); }
-  </style>
+  <title>The Gateway Experience</title>
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body data-lecture="gateway" data-asset-base="../">
 
-<div class="study-layout">
+<body>
 
-  <!-- ============ LEFT: STICKY AUDIO + TOC ============ -->
-  <aside class="left-col">
-    <div class="player-wrap audio">
-      <audio id="media-player" controls preload="none"></audio>
-    </div>
-    <div class="player-meta">
-      <span><span class="label">PLAYING</span><span class="now-track">— select an exercise —</span></span>
-      <span><span class="label">TIME</span><span class="now-playing">00:00:00</span></span>
-    </div>
+<main class="index-page">
 
-    <div class="toc-panel">
-      <div class="toc-label">Exercises</div>
-      <nav class="toc">
-        <ul>
-          <li><a href="#sec-01"><span class="toc-ts">33:06</span>01 — Orientation</a></li>
-          <li><a href="#sec-02"><span class="toc-ts">37:10</span>02 — Introduction to Focus 10</a></li>
-          <li><a href="#sec-03"><span class="toc-ts">36:05</span>03 — Advanced Focus 10</a></li>
-          <li><a href="#sec-04"><span class="toc-ts">36:01</span>04 — Release &amp; Recharge</a></li>
-          <li><a href="#sec-05"><span class="toc-ts">37:03</span>05 — Exploration, Sleep</a></li>
-          <li><a href="#sec-06"><span class="toc-ts">33:47</span>06 — Free Flow 10</a></li>
-          <li><a href="#sec-tools"><span class="toc-ts">§</span>Techniques &amp; Tools</a></li>
-          <li><a href="#sec-ahead"><span class="toc-ts">—</span>Looking Ahead</a></li>
-          <li><a href="#sec-reading"><span class="toc-ts">—</span>Recommended Reading</a></li>
-        </ul>
-      </nav>
-    </div>
-  </aside>
+  <header class="index-hero">
+    <h1>The Gateway Experience</h1>
+    <p>
+      A structured listening and study library for the Gateway Experience —
+      the seven primary Waves, related Gateway programs, supporting material,
+      and preserved alternate recordings.
+    </p>
+  </header>
 
-  <!-- ============ RIGHT: OUTLINE ============ -->
-  <main class="right-col">
+  <div class="lecture-list">
 
-    <header class="doc-header">
-      <div class="doc-eyebrow">The Gateway Experience · Wave 1</div>
-      <h1 class="doc-title">Discovery</h1>
-      <p class="doc-subtitle">
-        Six sequential Hemi-Sync® exercises that introduce the Focus 10 state —
-        "Mind Awake, Body Asleep." Each Discovery builds on the one before; results
-        are cumulative. Press play on an exercise to load it; the techniques and
-        tools the exercises rely on are collected for reference below.
-      </p>
-      <div class="doc-meta">
-        <div><span class="k">Source</span><span>Monroe Institute · Hemi-Sync®</span></div>
-        <div><span class="k">Format</span><span>6 exercises · 3:33:12 total</span></div>
-        <div><span class="k">Wave</span><span>1 — Discovery</span></div>
-        <div><span class="k">Outline rev</span><span>1.2</span></div>
+    <a class="lecture-card" href="wave-01/">
+      <span class="num">01</span>
+      <div>
+        <div class="lecture-title">Discovery</div>
+        <p class="lecture-sub">Introduction to Focus 10 — Mind Awake, Body Asleep.</p>
       </div>
-    </header>
+      <div class="lecture-meta">WAVE 1<br>6 EXERCISES</div>
+    </a>
 
-    <article class="outline">
+    <a class="lecture-card" href="wave-02/">
+      <span class="num">02</span>
+      <div>
+        <div class="lecture-title">Threshold</div>
+        <p class="lecture-sub">Introduction to Focus 12 and expanded awareness.</p>
+      </div>
+      <div class="lecture-meta">WAVE 2<br>6 EXERCISES</div>
+    </a>
 
-      <!-- ============================================================
-           THE SIX EXERCISES  (each loads its own audio file)
-           ============================================================ -->
+    <a class="lecture-card" href="wave-03/">
+      <span class="num">03</span>
+      <div>
+        <div class="lecture-title">Freedom</div>
+        <p class="lecture-sub">Exploration beyond ordinary physical awareness.</p>
+      </div>
+      <div class="lecture-meta">WAVE 3<br>6 EXERCISES</div>
+    </a>
 
-      <h2 id="sec-01"><span class="section-num">01</span><a class="track" data-src="../assets/audio/gateway/01-orientation.mp3" data-title="01 — Orientation">▶ play</a> — Orientation</h2>
-      <ul>
-        <li><span class="tag core">CORE</span>A detailed introduction to the Discovery Series — the Hemi-Sync® technology and its purpose in <span class="power">enhancing consciousness</span>.</li>
-      </ul>
+    <a class="lecture-card" href="wave-04/">
+      <span class="num">04</span>
+      <div>
+        <div class="lecture-title">Adventure</div>
+        <p class="lecture-sub">Patterning, nonverbal communication, and Focus 12 exploration.</p>
+      </div>
+      <div class="lecture-meta">WAVE 4<br>6 EXERCISES</div>
+    </a>
 
-      <h2 id="sec-02"><span class="section-num">02</span><a class="track" data-src="../assets/audio/gateway/02-introduction-to-focus-10.mp3" data-title="02 — Introduction to Focus 10">▶ play</a> — Introduction to Focus 10</h2>
-      <ul>
-        <li><span class="tag core">CORE</span><span class="power">"Mind Awake, Body Asleep"</span> — the mind stays alert while the body drifts into deep rest. The first step into the Focus 10 state.</li>
-      </ul>
+    <a class="lecture-card" href="wave-05/">
+      <span class="num">05</span>
+      <div>
+        <div class="lecture-title">Exploring</div>
+        <p class="lecture-sub">Intuition, Focus 15, creation, and manifestation.</p>
+      </div>
+      <div class="lecture-meta">WAVE 5<br>6 EXERCISES</div>
+    </a>
 
-      <h2 id="sec-03"><span class="section-num">03</span><a class="track" data-src="../assets/audio/gateway/03-advanced-focus-10.mp3" data-title="03 — Advanced Focus 10">▶ play</a> — Advanced Focus 10</h2>
-      <ul>
-        <li><span class="tag core">CORE</span>Build on the basic practice, deepening the ability to hold awareness in this profound state.</li>
-      </ul>
+    <a class="lecture-card" href="wave-06/">
+      <span class="num">06</span>
+      <div>
+        <div class="lecture-title">Odyssey</div>
+        <p class="lecture-sub">Locale exploration and introduction to Focus 21.</p>
+      </div>
+      <div class="lecture-meta">WAVE 6<br>6 EXERCISES</div>
+    </a>
 
-      <h2 id="sec-04"><span class="section-num">04</span><a class="track" data-src="../assets/audio/gateway/04-release-and-recharge.mp3" data-title="04 — Release &amp; Recharge">▶ play</a> — Release &amp; Recharge</h2>
-      <ul>
-        <li><span class="tag core">CORE</span>A guided energy revitalization exercise — refresh and balance the entire system, rejuvenating mind and body.</li>
-      </ul>
+    <a class="lecture-card" href="wave-07/">
+      <span class="num">07</span>
+      <div>
+        <div class="lecture-title">Voyager</div>
+        <p class="lecture-sub">Focus 23, Focus 25, Focus 27, retrieval, and beyond.</p>
+      </div>
+      <div class="lecture-meta">WAVE 7<br>6 EXERCISES</div>
+    </a>
 
-      <h2 id="sec-05"><span class="section-num">05</span><a class="track" data-src="../assets/audio/gateway/05-exploration-sleep.mp3" data-title="05 — Exploration, Sleep">▶ play</a> — Exploration, Sleep</h2>
-      <ul>
-        <li><span class="tag core">CORE</span>Explore the mystery of sleep — and use Focus 10 to enter sleep <span class="power">consciously and intentionally</span>.</li>
-      </ul>
+  </div>
 
-      <h2 id="sec-06"><span class="section-num">06</span><a class="track" data-src="../assets/audio/gateway/06-free-flow-10.mp3" data-title="06 — Free Flow 10">▶ play</a> — Free Flow 10</h2>
-      <ul>
-        <li><span class="tag core">CORE</span>A self-designed development process — create your own process to continue exploring and growing on your own.</li>
-      </ul>
+  <header class="index-hero" style="margin-top:72px;">
+    <h1 style="font-size:26px;">Additional Gateway Material</h1>
+    <p>
+      Related programs and additional Gateway recordings preserved alongside
+      the primary Wave sequence.
+    </p>
+  </header>
 
-      <!-- ============================================================
-           TECHNIQUES & TOOLS  (reference)
-           ============================================================ -->
+  <div class="lecture-list">
 
-      <h2 id="sec-tools"><span class="section-num">§</span>Techniques &amp; Tools</h2>
-      <p class="doc-subtitle" style="margin: 0 0 8px;">
-        Concepts and tools the exercises draw on. They're introduced within the
-        recordings as you go, and gathered here so you can review any one on its own.
-      </p>
+    <a class="lecture-card" href="journeys-out-of-the-body/">
+      <span class="num">J</span>
+      <div>
+        <div class="lecture-title">Journeys Out of the Body</div>
+        <p class="lecture-sub">Reinforcement and Conditions A–D.</p>
+      </div>
+      <div class="lecture-meta">5 TRACKS<br>TRACK 1 MISSING</div>
+    </a>
 
-      <h3>The Energy Conversion Box</h3>
-      <ul>
-        <li>A mental container that holds concerns, distractions, or interferences for the duration of the exercise. See it, feel it, hear it, think it, or simply imagine it.</li>
-        <li>Any form works — simple or ornate, high-tech or antique: a wooden chest, a sphere of light, a vacuum cleaner, a particle collider.</li>
-        <li>Place concrete symbols inside: a wallet for financial worry, a photo or doll for someone on your mind, limiting words like <span class="power">"can't," "shouldn't," "must,"</span> brick walls for your defenses, a desk or computer for work.</li>
-        <li>It's a tool — let it change, and return to it any time to deposit a new distraction.</li>
-      </ul>
+    <a class="lecture-card" href="lucid-dreaming/">
+      <span class="num">L</span>
+      <div>
+        <div class="lecture-title">Lucid Dreaming</div>
+        <p class="lecture-sub">Two Gateway-related lucid dreaming exercises.</p>
+      </div>
+      <div class="lecture-meta">2 EXERCISES</div>
+    </a>
 
-      <h3>The Affirmation</h3>
-      <ul>
-        <li>Focuses your intention and attention. Use the words as spoken, modify them for personal relevance, or substitute your own. Make it yours.</li>
-      </ul>
+    <a class="lecture-card" href="mission-series/">
+      <span class="num">M</span>
+      <div>
+        <div class="lecture-title">Mission Series</div>
+        <p class="lecture-sub">Mission 10, Mission 12, Mission Day, Mission Night, Horizons, and Pathways.</p>
+      </div>
+      <div class="lecture-meta">6 EXERCISES</div>
+    </a>
 
-      <h3>Resonant Tuning</h3>
-      <ul>
-        <li>Accelerates the gathering of your vibrational energy while reducing internal dialogue; vitalizes and charges the whole system and loosens blockages in natural energy channels.</li>
-        <li>Vocalize aloud and notice any physical manifestations. The sounds on the recording are only a guide — set your own rhythm and pace, move up and down the scale, experiment with vowel sounds.</li>
-      </ul>
+    <a class="lecture-card" href="pathways-prospecting/">
+      <span class="num">P</span>
+      <div>
+        <div class="lecture-title">Pathways / Prospecting</div>
+        <p class="lecture-sub">Preserved Gateway material including Bio Body, Near Reaches, and Far Reaches.</p>
+      </div>
+      <div class="lecture-meta">3 TRACKS<br>PARTIAL SET</div>
+    </a>
 
-      <h3>Energy-Conversion Breathing</h3>
-      <ul>
-        <li>Breathe only slightly deeper than normal. On the inhale, imagine pulling sparkling, vibrant energy into all parts of the body; let it move gently around the head on the hold; release tired, stale energy through the soles of the feet on each exhale.</li>
-      </ul>
+    <a class="lecture-card" href="alternates/">
+      <span class="num">A</span>
+      <div>
+        <div class="lecture-title">Alternate &amp; Archival Recordings</div>
+        <p class="lecture-sub">Preserved alternate editions and same-title variants.</p>
+      </div>
+      <div class="lecture-meta">ARCHIVE</div>
+    </a>
 
-      <h3>The Resonant Energy Balloon (REBAL)</h3>
-      <ul>
-        <li>A tool for creating a high-energy state within and around you. The REBAL acts as a magnet — attracting influences you desire and shielding you from undesired energy. The more you build it, the better you sustain higher energy.</li>
-        <li>It may spontaneously change form, develop a delicate membrane, or grow radiant like an intensified aura. Even when you don't perceive it, play with sensing it, or store the energy as in a charged battery.</li>
-        <li>Switch it on in C-1 or any state with a single resonant energy breath: inhale vibrant energy, and as you hold it, picture a bright moving circle with the number <span class="power">10</span> inside; let the circle surround you as you exhale.</li>
-        <li>Experiment — "pop" your REBAL in a group and see whether its resonance attracts people in harmony with it; extend it around your car and note whether traffic and parking come easier.</li>
-      </ul>
+  </div>
 
-      <h3>Signposts &amp; Returning</h3>
-      <ul>
-        <li>Opening and closing the eyes may feel awkward — do it anyway. It's a first step in learning you can control autonomic processes and habitual behavior.</li>
-        <li>Return to full waking consciousness at any time by breathing normally, opening your eyes, or moving the fingers of your right hand.</li>
-        <li><span class="power">Focus 3</span> is the first signpost — a Hemi-Sync state where brain and mind are more coherent, synchronized, and balanced.</li>
-        <li>Return to <span class="power">Full Waking Consciousness (C-1)</span> at the end of every exercise is cued by a strong audio signal. Keep the headphones on until it withdraws — the more completely you come "back," the further you can go next time.</li>
-      </ul>
-
-      <h3>Heightened Sensitivity in Focus 10</h3>
-      <ul>
-        <li>Awareness can sharpen: the pores of the skin breathing, the swish of blood behind the ears, the heartbeat.</li>
-        <li>Spontaneous remote sensing is possible — sounds, or faraway and delicate odors. Place all expectations in the box, relax, and go with whatever you experience.</li>
-      </ul>
-
-      <h3>The Health Affirmation</h3>
-      <ul>
-        <li>Closing each exercise, it helps balance physical and nonphysical energies — working for you without effort on your part.</li>
-      </ul>
-
-      <!-- ============================================================
-           LOOKING AHEAD  (reference)
-           ============================================================ -->
-
-      <h2 id="sec-ahead"><span class="section-num">→</span>Looking Ahead</h2>
-      <ul>
-        <li>Discovery is only the first step. Just as each exercise builds on the last, the whole Gateway Experience builds on itself — feel free to repeat any earlier exercise; the results are cumulative.</li>
-        <li><span class="power">Wave 2 — Threshold</span> follows with six sequential exercises: tools for controlling non-physical energy and the high-energy state of <span class="power">Focus 12</span>.</li>
-      </ul>
-
-      <!-- ============================================================
-           RECOMMENDED READING  (reference)
-           ============================================================ -->
-
-      <h2 id="sec-reading"><span class="section-num">▦</span>Recommended Reading</h2>
-      <ul>
-        <li><span class="power">Journeys Out of the Body</span> — Robert A. Monroe (Doubleday, 1971). The undisputed classic on out-of-body experiences.</li>
-        <li><span class="power">Far Journeys</span> — Robert A. Monroe (Doubleday, 1985). Written after a decade of research; travels farther beyond the known dimensions of the physical universe.</li>
-        <li><span class="power">Ultimate Journey</span> — Robert A. Monroe (Doubleday, 1994). The long-awaited sequel charting the route beyond the limits of physical life.</li>
-      </ul>
-
-      <footer class="doc-footer">
-        <span>The Gateway Experience · Wave 1 — Discovery · outline rev 1.2</span>
-        <a href="../index.html">← all studies</a>
-      </footer>
-    </article>
-  </main>
-
-</div>
+</main>
 
 <button class="theme-toggle">LIGHT MODE</button>
-<script src="../assets/js/player.js"></script>
+
+<script>
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+
+  const toggle = document.querySelector('.theme-toggle');
+
+  function updateToggle() {
+    toggle.textContent =
+      document.documentElement.dataset.theme === 'light'
+        ? 'DARK MODE'
+        : 'LIGHT MODE';
+  }
+
+  updateToggle();
+
+  toggle.addEventListener('click', () => {
+    const next =
+      document.documentElement.dataset.theme === 'light'
+        ? 'dark'
+        : 'light';
+
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem('theme', next);
+    updateToggle();
+  });
+</script>
+
 </body>
 </html>
