@@ -753,180 +753,78 @@ h2 .ts, h3 .ts { font-size: 0.7em; }
   color: var(--text-dim);
 }
 
-
 /* ============================================================
-   MOBILE — COLLAPSIBLE GATEWAY LIBRARY
-   ============================================================ */
-
-.library-toggle {
-  display: none;
-}
-
-@media (max-width: 860px) {
-
-  .library-panel {
-    padding: 0;
-    border: 1px solid var(--border-strong);
-  }
-
-  .library-label {
-    display: none;
-  }
-
-  .library-toggle {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 0;
-    background: var(--bg-elevated);
-    color: var(--text);
-    padding: 11px 12px;
-    font-family: var(--font-mono);
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
-
-  .library-toggle::after {
-    content: "＋";
-    color: var(--accent);
-    font-size: 14px;
-  }
-
-  .library-panel.open .library-toggle::after {
-    content: "−";
-  }
-
-  .library-nav.library-nav-stacked {
-    display: none;
-    padding: 4px 10px 12px;
-    max-height: 55vh;
-    overflow-y: auto;
-    border-top: 1px solid var(--border);
-  }
-
-  .library-panel.open .library-nav.library-nav-stacked {
-    display: block;
-  }
-
-}
-
-/* ============================================================
-   GATEWAY RESPONSIVE NAV — CORRECTED
-   The existing GATEWAY LIBRARY nav button controls the menu.
-   ============================================================ */
-
-@media (max-width: 860px) {
-
-  /* Remove obsolete duplicate toggle */
-  .library-toggle {
-    display: none !important;
-  }
-
-  /* Library moves beneath the top page navigation and stays closed */
-  .library-panel {
-    display: none;
-    margin: -20px 0 28px;
-    padding: 10px 14px 14px;
-    background: var(--bg-elevated);
-    border: 1px solid var(--border-strong);
-  }
-
-  .library-panel.open {
-    display: block;
-  }
-
-  .library-panel .library-label {
-    display: none;
-  }
-
-  .library-nav.library-nav-stacked {
-    display: none;
-    max-height: 60vh;
-    overflow-y: auto;
-  }
-
-  .library-panel.open .library-nav.library-nav-stacked {
-    display: block;
-  }
-
-  /* The middle nav control now visibly indicates open/closed state */
-  .gateway-page-nav .library-home::after {
-    content: " +";
-    margin-left: 8px;
-  }
-
-  .gateway-page-nav .library-home[aria-expanded="true"]::after {
-    content: " −";
-  }
-}
-
-
-/* ============================================================
-   RESPONSIVE NAVIGATION — SIMPLIFIED
-   Gateway Library = page navigation.
-   Exercises = current-page navigation.
+   GATEWAY RESPONSIVE NAVIGATION — FINAL
+   Cross-page library disappears on narrow layouts.
+   Current-page EXERCISES becomes the collapsible drawer.
    ============================================================ */
 
 .exercise-toggle {
   display: none;
 }
 
-/* Tablet / narrow desktop:
-   remove the bulky cross-page library from the sidebar */
+/* Narrow desktop / tablet:
+   keep the current-page exercise list, remove the redundant cross-page library */
 @media (max-width: 1100px) {
   .left-col > .library-panel {
     display: none !important;
   }
 }
 
-/* Mobile / single-column:
-   expose only the useful current-page exercise navigation */
+/* Mobile / single-column */
 @media (max-width: 860px) {
+  .study-layout {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0;
+  }
 
+  .left-col {
+    position: sticky;
+    top: 0;
+    height: auto;
+    z-index: 100;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 16px;
+    gap: 8px;
+  }
+
+  /* The exact on-page Exercises list becomes the mobile drawer. */
   .exercise-toggle {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
-
-    padding: 10px 12px;
-
+    padding: 11px 12px;
     border: 1px solid var(--border-strong);
     background: var(--bg-elevated);
     color: var(--text);
-
     font-family: var(--font-mono);
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-
     cursor: pointer;
   }
 
   .exercise-toggle-mark {
     color: var(--accent);
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1;
   }
 
   .left-col .toc-panel {
     display: none;
     flex: none;
-
+    min-height: 0;
     max-height: 48vh;
-    overflow-y: auto;
-
     margin: 0;
-    padding: 10px 8px 12px;
-
-    border: 1px solid var(--border);
+    padding: 8px 0 10px;
+    border: 1px solid var(--border-strong);
     border-top: 0;
-
     background: var(--bg-elevated);
+    overflow: hidden;
   }
 
   .left-col .toc-panel.open {
@@ -937,15 +835,40 @@ h2 .ts, h3 .ts { font-size: 0.7em; }
     display: none;
   }
 
-  /* Old experimental mobile-library behavior is gone */
+  .left-col .toc {
+    display: block;
+    overflow-y: auto;
+    padding: 2px 10px 4px;
+  }
+
+  .left-col .toc a {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  /* Cross-page Gateway Library is not duplicated in the sticky mobile panel. */
   .left-col > .library-panel,
   .library-toggle {
     display: none !important;
   }
 
-  /* Gateway Library in the top/bottom nav is simply a page link */
   .gateway-page-nav .library-home::after {
     content: none !important;
   }
-}
 
+  .right-col {
+    padding: 24px 20px 160px;
+  }
+
+  .doc-title {
+    font-size: 24px;
+  }
+
+  .index-page {
+    padding: 56px 20px 160px;
+  }
+
+  .index-hero h1 {
+    font-size: 30px;
+  }
+}
