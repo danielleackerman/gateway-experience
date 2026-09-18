@@ -813,3 +813,54 @@ h2 .ts, h3 .ts { font-size: 0.7em; }
   }
 
 }
+
+/* ============================================================
+   GATEWAY RESPONSIVE NAV — CORRECTED
+   The existing GATEWAY LIBRARY nav button controls the menu.
+   ============================================================ */
+
+@media (max-width: 860px) {
+
+  /* Remove obsolete duplicate toggle */
+  .library-toggle {
+    display: none !important;
+  }
+
+  /* Library moves beneath the top page navigation and stays closed */
+  .library-panel {
+    display: none;
+    margin: -20px 0 28px;
+    padding: 10px 14px 14px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-strong);
+  }
+
+  .library-panel.open {
+    display: block;
+  }
+
+  .library-panel .library-label {
+    display: none;
+  }
+
+  .library-nav.library-nav-stacked {
+    display: none;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  .library-panel.open .library-nav.library-nav-stacked {
+    display: block;
+  }
+
+  /* The middle nav control now visibly indicates open/closed state */
+  .gateway-page-nav .library-home::after {
+    content: " +";
+    margin-left: 8px;
+  }
+
+  .gateway-page-nav .library-home[aria-expanded="true"]::after {
+    content: " −";
+  }
+}
+

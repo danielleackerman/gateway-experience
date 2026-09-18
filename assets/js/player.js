@@ -296,14 +296,91 @@
   });
 })();
 
-/* ---------- Mobile Gateway Library ---------- */
-document.addEventListener('click', (e) => {
-  const toggle = e.target.closest('.library-toggle');
-  if (!toggle) return;
 
-  const panel = toggle.closest('.library-panel');
-  const open = panel.classList.toggle('open');
+/* ---------- Responsive Gateway Library ---------- */
+(() => {
+  const mobile = window.matchMedia('(max-width: 860px)');
 
-  toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-});
+  let panel = null;
+  let topNav = null;
+  let homeMarker = null;
 
+  function setExpanded(open) {
+    if (!panel) return;
+
+    panel.classList.toggle('open', open);
+
+    document
+      .querySelectorAll('.gateway-page-nav .library-home')
+      .forEach((button) => {
+        button.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+  }
+
+  function placeLibrary() {
+    if (!panel || !topNav || !homeMarker) return;
+
+    setExpanded(false);
+
+    if (mobile.matches) {
+      // On narrow screens the library belongs directly below
+      // the top Previous / Library / Next navigation.
+      topNav.insertAdjacentElement('afterend', panel);
+    } else {
+      // Restore the permanent left-column library on desktop.
+      homeMarker.parentNode.insertBefore(panel, homeMarker.nextSibling);
+    }
+  }
+
+  function initGatewayLibrary() {
+    panel = document.querySelector('.library-panel');
+    topNav = document.querySelector('.gateway-page-nav:not(.bottom)');
+
+    if (!panel || !topNav) return;
+
+    homeMarker = document.createComment('gateway-library-desktop-position');
+    panel.parentNode.insertBefore(homeMarker, panel);
+
+    document
+      .querySelectorAll('.gateway-page-nav .library-home')
+      .forEach((button) => {
+        button.setAttribute('aria-expanded', 'false');
+      });
+
+    placeLibrary();
+
+    if (mobile.addEventListener) {
+      mobile.addEventListener('change', placeLibrary);
+    } else {
+      mobile.addListener(placeLibrary);
+    }
+  }
+
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('.gateway-page-nav .library-home');
+
+    if (!trigger || !mobile.matches || !panel) return;
+
+    // On narrow screens GATEWAY LIBRARY is a menu control,
+    // not a link to another page.
+    e.preventDefault();
+
+    const open = !panel.classList.contains('open');
+    setExpanded(open);
+
+    // If the bottom Library button was used, bring the opened
+    // library at the top of the page into view.
+    if (open && trigger.closest('.bottom')) {
+      topNav.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initGatewayLibrary);
+  } else {
+    initGatewayLibrary();
+  }
+})();
