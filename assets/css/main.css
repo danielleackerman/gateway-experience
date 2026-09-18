@@ -872,3 +872,71 @@ h2 .ts, h3 .ts { font-size: 0.7em; }
     font-size: 30px;
   }
 }
+
+/* ============================================================
+   CONTROL VISIBILITY TUNING
+   Brighter controls + real hover/focus states
+   ============================================================ */
+
+.exercise-toggle,
+.gateway-page-nav a {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.18);
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.gateway-page-nav a {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+}
+
+.exercise-toggle:hover,
+.exercise-toggle:focus-visible,
+.gateway-page-nav a:hover,
+.gateway-page-nav a:focus-visible {
+  color: #ffffff;
+  background: rgba(110, 140, 255, 0.12);
+  border-color: rgba(110, 140, 255, 0.65);
+  box-shadow: 0 0 0 1px rgba(110, 140, 255, 0.18) inset;
+  text-decoration: none;
+  outline: none;
+}
+
+.exercise-toggle:active,
+.gateway-page-nav a:active {
+  transform: translateY(1px);
+}
+
+.gateway-page-nav .library-home {
+  font-weight: 700;
+  color: #9db2ff;
+  background: rgba(110, 140, 255, 0.10);
+  border-color: rgba(110, 140, 255, 0.50);
+}
+
+.gateway-page-nav .library-home:hover,
+.gateway-page-nav .library-home:focus-visible {
+  color: #ffffff;
+  background: rgba(110, 140, 255, 0.18);
+  border-color: rgba(110, 140, 255, 0.85);
+}
+
+.exercise-toggle-mark {
+  color: #9db2ff;
+}
+
+/* Keep the mobile exercise drawer visually tied to the button */
+@media (max-width: 860px) {
+  .left-col .toc-panel {
+    border-color: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.02);
+  }
+}
+
