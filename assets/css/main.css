@@ -753,3 +753,63 @@ h2 .ts, h3 .ts { font-size: 0.7em; }
   color: var(--text-dim);
 }
 
+
+/* ============================================================
+   MOBILE — COLLAPSIBLE GATEWAY LIBRARY
+   ============================================================ */
+
+.library-toggle {
+  display: none;
+}
+
+@media (max-width: 860px) {
+
+  .library-panel {
+    padding: 0;
+    border: 1px solid var(--border-strong);
+  }
+
+  .library-label {
+    display: none;
+  }
+
+  .library-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0;
+    background: var(--bg-elevated);
+    color: var(--text);
+    padding: 11px 12px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .library-toggle::after {
+    content: "＋";
+    color: var(--accent);
+    font-size: 14px;
+  }
+
+  .library-panel.open .library-toggle::after {
+    content: "−";
+  }
+
+  .library-nav.library-nav-stacked {
+    display: none;
+    padding: 4px 10px 12px;
+    max-height: 55vh;
+    overflow-y: auto;
+    border-top: 1px solid var(--border);
+  }
+
+  .library-panel.open .library-nav.library-nav-stacked {
+    display: block;
+  }
+
+}

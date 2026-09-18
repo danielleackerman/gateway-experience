@@ -295,3 +295,15 @@
     updateTocActive();
   });
 })();
+
+/* ---------- Mobile Gateway Library ---------- */
+document.addEventListener('click', (e) => {
+  const toggle = e.target.closest('.library-toggle');
+  if (!toggle) return;
+
+  const panel = toggle.closest('.library-panel');
+  const open = panel.classList.toggle('open');
+
+  toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+
