@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Gateway Experience · Wave 2 — Threshold</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <style>
+    /* Audio player overrides for this study (self-hosted audio, no video box) */
+    .player-wrap.audio {
+      aspect-ratio: auto;
+      background: var(--bg-elevated);
+      display: flex;
+      align-items: center;
+      padding: 14px;
+    }
+    .player-wrap.audio audio { width: 100%; }
+    .track {
+      font-family: var(--font-mono);
+      font-size: 0.78em;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 2px 9px;
+      margin-right: 2px;
+      border: 1px solid rgba(123, 158, 255, 0.3);
+      border-radius: 2px;
+      cursor: pointer;
+      background: var(--accent-glow);
+      white-space: nowrap;
+      transition: background 0.12s var(--ease), color 0.12s var(--ease);
+    }
+    .track:hover { background: rgba(123, 158, 255, 0.24); }
+    .track.playing { background: var(--accent); color: var(--bg); }
+    .player-meta .now-track { color: var(--accent); }
+  </style>
+</head>
+<body data-lecture="gateway" data-asset-base="../">
+
+<div class="study-layout">
+
+  <!-- ============ LEFT: STICKY AUDIO + TOC ============ -->
+  <aside class="left-col">
+    <div class="player-wrap audio">
+      <audio id="media-player" controls preload="none"></audio>
+    </div>
+    <div class="player-meta">
+      <span><span class="label">PLAYING</span><span class="now-track">— select an exercise —</span></span>
+      <span><span class="label">TIME</span><span class="now-playing">00:00:00</span></span>
+    </div>
+
+    <div class="toc-panel">
+      <div class="toc-label">Exercises</div>
+      <nav class="toc">
+        <ul>
+          <li><a href="#sec-01"><span class="toc-ts">01</span>Introduction to Focus 12</a></li>
+          <li><a href="#sec-02"><span class="toc-ts">02</span>Problem Solving</a></li>
+          <li><a href="#sec-03"><span class="toc-ts">03</span>One-Month Patterning</a></li>
+          <li><a href="#sec-04"><span class="toc-ts">04</span>Color Breathing</a></li>
+          <li><a href="#sec-05"><span class="toc-ts">05</span>Energy Bar Tool</a></li>
+          <li><a href="#sec-06"><span class="toc-ts">06</span>Living Body Map</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- ============ RIGHT: OUTLINE ============ -->
+  <main class="right-col">
+
+    <header class="doc-header">
+      <div class="doc-eyebrow">The Gateway Experience · Wave 2</div>
+      <h1 class="doc-title">Threshold</h1>
+      <p class="doc-subtitle">
+        Six sequential Hemi-Sync® exercises that build on Focus 10 and introduce
+        Focus 12 — a state of expanded awareness. Threshold develops practical
+        tools for problem solving, patterning, energy work, and body awareness.
+        Press play on an exercise to load it.
+      </p>
+      <div class="doc-meta">
+        <div><span class="k">Source</span><span>Monroe Institute · Hemi-Sync®</span></div>
+        <div><span class="k">Format</span><span>6 exercises</span></div>
+        <div><span class="k">Wave</span><span>2 — Threshold</span></div>
+        <div><span class="k">Outline rev</span><span>1.2</span></div>
+      </div>
+    </header>
+
+    <article class="outline">
+
+      <!-- ============================================================
+           THE SIX EXERCISES  (each loads its own audio file)
+           ============================================================ -->
+
+      <h2 id="sec-01"><span class="section-num">01</span><a class="track" data-src="https://pub-c74dd85583b44f709966677c67c4c896.r2.dev/waves/wave-02-threshold/01-introduction-to-focus-12.mp3" data-title="01 — Introduction to Focus 12">▶ play</a> — Introduction to Focus 12</h2>
+      <ul>
+        <li><span class="tag core">CORE</span>Introduces <span class="power">Focus 12</span>, expanding awareness beyond the physical body while maintaining the deeply relaxed Focus 10 state.</li>
+      </ul>
+
+      <h2 id="sec-02"><span class="section-num">02</span><a class="track" data-src="https://pub-c74dd85583b44f709966677c67c4c896.r2.dev/waves/wave-02-threshold/02-problem-solving.mp3" data-title="02 — Problem Solving">▶ play</a> — Problem Solving</h2>
+      <ul>
+        <li><span class="tag core">CORE</span>Uses Focus 12 as a state for presenting a question or problem and remaining open to information, insight, or possible solutions.</li>
+      </ul>
+
+      <h2 id="sec-03"><span class="section-num">03</span><a class="track" data-src="https://pub-c74dd85583b44f709966677c67c4c896.r2.dev/waves/wave-02-threshold/03-one-month-patterning.mp3" data-title="03 — One-Month Patterning">▶ play</a> — One-Month Patterning</h2>
+      <ul>
+        <li><span class="tag core">CORE</span>Introduces patterning: using Focus 12 to form a clear mental pattern for desired changes or experiences over approximately one month.</li>
+      </ul>
+
+      <h2 id="sec-04"><span class="section-num">04</span><a class="track" data-src="https://pub-c74dd85583b44f709966677c67c4c896.r2.dev/waves/wave-02-threshold/04-color-breathing.mp3" data-title="04 — Color Breathing">▶ play</a> — Color Breathing</h2>
+      <ul>
+        <li><span class="tag core">CORE</span>Combines breathing, attention, and imagined color as a practical method for influencing and balancing mental, emotional, and physical states.</li>
+      </ul>
+
+      <h2 id="sec-05"><span class="section-num">05</span><a class="track" data-src="https://pub-c74dd85583b44f709966677c67c4c896.r2.dev/waves/wave-02-threshold/05-energy-bar-tool.mp3" data-title="05 — Energy Bar Tool">▶ play</a> — Energy Bar Tool</h2>
+      <ul>
+        <li><span class="tag core">CORE</span>Develops the <span class="power">Energy Bar Tool</span> — a focused form of nonphysical energy that can be shaped and directed during exploration.</li>
+      </ul>
+
+      <h2 id="sec-06"><span class="section-num">06</span><a class="track" data-src="https://pub-c74dd85583b44f709966677c67c4c896.r2.dev/waves/wave-02-threshold/06-living-body-map.mp3" data-title="06 — Living Body Map">▶ play</a> — Living Body Map</h2>
+      <ul>
+        <li><span class="tag core">CORE</span>Directs expanded awareness through the physical body as a living map, supporting perception of individual areas and overall balance.</li>
+      </ul>
+
+      <!-- ============================================================
+           TECHNIQUES & TOOLS  (reference)
+           ============================================================ -->
+
+      <footer class="doc-footer">
+        <span>The Gateway Experience · Wave 2 — Threshold · outline rev 1.0</span>
+        <a href="../index.html">← all studies</a>
+      </footer>
+    </article>
+  </main>
+
+</div>
+
+<button class="theme-toggle">LIGHT MODE</button>
+<script src="../assets/js/player.js"></script>
+</body>
+</html>
