@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Gateway Experience · Mission Series</title>
+  <link rel="stylesheet" href="../assets/css/main.css?v=ui-tuning-3">
+  <style>
+    /* Audio player overrides for this study (self-hosted audio, no video box) */
+    .player-wrap.audio {
+      aspect-ratio: auto;
+      background: var(--bg-elevated);
+      display: flex;
+      align-items: center;
+      padding: 14px;
+    }
+    .player-wrap.audio audio { width: 100%; }
+    .track {
+      font-family: var(--font-mono);
+      font-size: 0.78em;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 2px 9px;
+      margin-right: 2px;
+      border: 1px solid rgba(123, 158, 255, 0.3);
+      border-radius: 2px;
+      cursor: pointer;
+      background: var(--accent-glow);
+      white-space: nowrap;
+      transition: background 0.12s var(--ease), color 0.12s var(--ease);
+    }
+    .track:hover { background: rgba(123, 158, 255, 0.24); }
+    .track.playing { background: var(--accent); color: var(--bg); }
+    .player-meta .now-track { color: var(--accent); }
+  </style>
+</head>
+<body data-lecture="gateway" data-asset-base="../">
+
+<div class="study-layout">
+
+  <!-- ============ LEFT: STICKY AUDIO + TOC ============ -->
+  <aside class="left-col">
+    <div class="player-wrap audio">
+      <audio id="media-player" controls preload="none"></audio>
+    </div>
+    <div class="player-meta">
+      <span><span class="label">PLAYING</span><span class="now-track">— select an exercise —</span></span>
+      <span><span class="label">TIME</span><span class="now-playing">00:00:00</span></span>
+    </div>
+
+    <div class="library-panel">
+      <div class="library-label">Gateway Library</div>
+
+      <nav class="library-nav library-nav-stacked">
+                <a href="../index.html">Overview</a>
+
+        <div class="library-group-label">Primary Waves</div>
+                <a href="../wave-01/">Wave 1 · Discovery</a>
+                <a href="../wave-02/">Wave 2 · Threshold</a>
+                <a href="../wave-03/">Wave 3 · Freedom</a>
+                <a href="../wave-04/">Wave 4 · Adventure</a>
+                <a href="../wave-05/">Wave 5 · Exploring</a>
+                <a href="../wave-06/">Wave 6 · Odyssey</a>
+                <a href="../wave-07/">Wave 7 · Voyager</a>
+
+        <div class="library-group-label">Additional Gateway</div>
+                <a href="../journeys-out-of-the-body/">Journeys Out of the Body</a>
+                <a href="../lucid-dreaming/">Lucid Dreaming</a>
+                <a class="active" href="../mission-series/">Mission Series</a>
+                <a href="../pathways-prospecting/">Pathways / Prospecting</a>
+
+        <div class="library-group-label">Archive</div>
+                <a href="../alternates/">Alternates / Archive</a>
+      </nav>
+    </div>
+
+    <button class="exercise-toggle" type="button" aria-expanded="false">
+      <span>Exercises</span>
+      <span class="exercise-toggle-mark">＋</span>
+    </button>
+
+    <div class="toc-panel">
+      <div class="toc-label">Exercises</div>
+      <nav class="toc">
+        <ul>
+          <li><a href="#sec-01"><span class="toc-ts">01</span>Mission 10</a></li>
+          <li><a href="#sec-02"><span class="toc-ts">02</span>Mission 12</a></li>
+          <li><a href="#sec-03"><span class="toc-ts">03</span>Mission Day</a></li>
+          <li><a href="#sec-04"><span class="toc-ts">04</span>Mission Night</a></li>
+          <li><a href="#sec-05"><span class="toc-ts">05</span>Horizons</a></li>
+          <li><a href="#sec-06"><span class="toc-ts">06</span>Pathways</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- ============ RIGHT: OUTLINE ============ -->
+  <main class="right-col">
+
+    <div class="gateway-page-nav">
+        <a href="../lucid-dreaming/">← Lucid Dreaming</a>
+        <a class="library-home" href="../index.html">GATEWAY LIBRARY</a>
+        <a class="next" href="../pathways-prospecting/">Pathways / Prospecting →</a>
+      </div>
+
+    <header class="doc-header">
+      <div class="doc-eyebrow">The Gateway Experience · Additional Gateway</div>
+      <h1 class="doc-title">Mission Series</h1>
+      <p class="doc-subtitle">
+        Six preserved Gateway recordings in the Mission Series:
+        Mission 10, Mission 12, Mission Day, Mission Night,
+        Horizons, and Pathways. Press play on a recording to load it.
+      </p>
+      <div class="doc-meta">
+        <div><span class="k">Source</span><span>Monroe Institute · Hemi-Sync®</span></div>
+        <div><span class="k">Format</span><span>6 recordings</span></div>
+        <div><span class="k">Series</span><span>Mission Series</span></div>
+        <div><span class="k">Outline rev</span><span>1.2</span></div>
+      </div>
+    </header>
+
+    <article class="outline">
+
+      <!-- ============================================================
+           THE SIX EXERCISES  (each loads its own audio file)
+           ============================================================ -->
+
+      <h2 id="sec-01"><span class="section-num">01</span><a class="track" data-src="https://pub-c74dd85583b44f709966677c67c4c896.r2.dev/alternates/mission-series/01-mission-10.mp3" data-title="01 — Mission 10">▶ play</a> — Mission 10</h2>
+      <ul>
+        <li><span class="tag core">CORE</span>A preserved Gateway recording labeled Mission 10.</li>
+      </ul>
+
+      <h2 id="sec-02"><span class="section-num">02</span><a class="track" data-src="https://pub-c74dd85583b44f709966677c67c4c896.r2.dev/alternates/mission-series/02-mission-12.mp3" data-title="02 — Mission 12">▶ play</a> — Mission 12</h2>
+      <ul>
+        <li><span class="tag core">CORE</span>A preserved Gateway recording labeled Mission 12.</li>
+      </ul>
+
+      <h2 id="sec-03"><span class="section-num">03</span><a class="track" data-src="https://pub-c74dd85583b44f709966677c67c4c896.r2.dev/alternates/mission-series/03-mission-day.mp3" data-title="03 — Mission Day">▶ play</a> — Mission Day</h2>
+      <ul>
+        <li><span class="tag core">CORE</span>The Mission Day recording from the preserved Mission Series set.</li>
+      </ul>
+
+      <h2 id="sec-04"><span class="section-num">04</span><a class="track" data-src="https://pub-c74dd85583b44f709966677c67c4c896.r2.dev/alternates/mission-series/04-mission-night.mp3" data-title="04 — Mission Night">▶ play</a> — Mission Night</h2>
+      <ul>
+        <li><span class="tag core">CORE</span>The Mission Night recording from the preserved Mission Series set.</li>
+      </ul>
+
+      <h2 id="sec-05"><span class="section-num">05</span><a class="track" data-src="https://pub-c74dd85583b44f709966677c67c4c896.r2.dev/alternates/mission-series/05-horizons.mp3" data-title="05 — Horizons">▶ play</a> — Horizons</h2>
+      <ul>
+        <li><span class="tag core">CORE</span>The recording preserved under the source title Horizons.</li>
+      </ul>
+
+      <h2 id="sec-06"><span class="section-num">06</span><a class="track" data-src="https://pub-c74dd85583b44f709966677c67c4c896.r2.dev/alternates/mission-series/06-pathways.mp3" data-title="06 — Pathways">▶ play</a> — Pathways</h2>
+      <ul>
+        <li><span class="tag core">CORE</span>The recording preserved under the source title Pathways.</li>
+      </ul>
+
+      <div class="gateway-page-nav bottom">
+        <a href="../lucid-dreaming/">← Lucid Dreaming</a>
+        <a class="library-home" href="../index.html">GATEWAY LIBRARY</a>
+        <a class="next" href="../pathways-prospecting/">Pathways / Prospecting →</a>
+      </div>
+
+    </article>
+  </main>
+
+</div>
+
+<button class="theme-toggle">LIGHT MODE</button>
+<script src="../assets/js/player.js?v=gateway-responsive-3"></script>
+</body>
+</html>
