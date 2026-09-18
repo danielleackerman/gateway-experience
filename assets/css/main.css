@@ -864,3 +864,88 @@ h2 .ts, h3 .ts { font-size: 0.7em; }
   }
 }
 
+
+/* ============================================================
+   RESPONSIVE NAVIGATION — SIMPLIFIED
+   Gateway Library = page navigation.
+   Exercises = current-page navigation.
+   ============================================================ */
+
+.exercise-toggle {
+  display: none;
+}
+
+/* Tablet / narrow desktop:
+   remove the bulky cross-page library from the sidebar */
+@media (max-width: 1100px) {
+  .left-col > .library-panel {
+    display: none !important;
+  }
+}
+
+/* Mobile / single-column:
+   expose only the useful current-page exercise navigation */
+@media (max-width: 860px) {
+
+  .exercise-toggle {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 12px;
+
+    border: 1px solid var(--border-strong);
+    background: var(--bg-elevated);
+    color: var(--text);
+
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+  }
+
+  .exercise-toggle-mark {
+    color: var(--accent);
+    font-size: 14px;
+  }
+
+  .left-col .toc-panel {
+    display: none;
+    flex: none;
+
+    max-height: 48vh;
+    overflow-y: auto;
+
+    margin: 0;
+    padding: 10px 8px 12px;
+
+    border: 1px solid var(--border);
+    border-top: 0;
+
+    background: var(--bg-elevated);
+  }
+
+  .left-col .toc-panel.open {
+    display: flex;
+  }
+
+  .left-col .toc-label {
+    display: none;
+  }
+
+  /* Old experimental mobile-library behavior is gone */
+  .left-col > .library-panel,
+  .library-toggle {
+    display: none !important;
+  }
+
+  /* Gateway Library in the top/bottom nav is simply a page link */
+  .gateway-page-nav .library-home::after {
+    content: none !important;
+  }
+}
+

@@ -297,90 +297,38 @@
 })();
 
 
-/* ---------- Responsive Gateway Library ---------- */
+/* ---------- Responsive Exercises ---------- */
 (() => {
-  const mobile = window.matchMedia('(max-width: 860px)');
-
-  let panel = null;
-  let topNav = null;
-  let homeMarker = null;
-
-  function setExpanded(open) {
-    if (!panel) return;
-
-    panel.classList.toggle('open', open);
-
-    document
-      .querySelectorAll('.gateway-page-nav .library-home')
-      .forEach((button) => {
-        button.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-  }
-
-  function placeLibrary() {
-    if (!panel || !topNav || !homeMarker) return;
-
-    setExpanded(false);
-
-    if (mobile.matches) {
-      // On narrow screens the library belongs directly below
-      // the top Previous / Library / Next navigation.
-      topNav.insertAdjacentElement('afterend', panel);
-    } else {
-      // Restore the permanent left-column library on desktop.
-      homeMarker.parentNode.insertBefore(panel, homeMarker.nextSibling);
-    }
-  }
-
-  function initGatewayLibrary() {
-    panel = document.querySelector('.library-panel');
-    topNav = document.querySelector('.gateway-page-nav:not(.bottom)');
-
-    if (!panel || !topNav) return;
-
-    homeMarker = document.createComment('gateway-library-desktop-position');
-    panel.parentNode.insertBefore(homeMarker, panel);
-
-    document
-      .querySelectorAll('.gateway-page-nav .library-home')
-      .forEach((button) => {
-        button.setAttribute('aria-expanded', 'false');
-      });
-
-    placeLibrary();
-
-    if (mobile.addEventListener) {
-      mobile.addEventListener('change', placeLibrary);
-    } else {
-      mobile.addListener(placeLibrary);
-    }
-  }
-
   document.addEventListener('click', (e) => {
-    const trigger = e.target.closest('.gateway-page-nav .library-home');
+    const toggle = e.target.closest('.exercise-toggle');
+    if (!toggle) return;
 
-    if (!trigger || !mobile.matches || !panel) return;
+    const panel = toggle.nextElementSibling;
+    if (!panel || !panel.classList.contains('toc-panel')) return;
 
-    // On narrow screens GATEWAY LIBRARY is a menu control,
-    // not a link to another page.
-    e.preventDefault();
+    const open = panel.classList.toggle('open');
 
-    const open = !panel.classList.contains('open');
-    setExpanded(open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
 
-    // If the bottom Library button was used, bring the opened
-    // library at the top of the page into view.
-    if (open && trigger.closest('.bottom')) {
-      topNav.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
+    const mark = toggle.querySelector('.exercise-toggle-mark');
+    if (mark) mark.textContent = open ? '−' : '＋';
   });
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initGatewayLibrary);
-  } else {
-    initGatewayLibrary();
-  }
+  /* Close the mobile exercise menu after selecting an exercise */
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('.toc-panel .toc a');
+    if (!link || window.innerWidth > 860) return;
+
+    const panel = link.closest('.toc-panel');
+    const toggle = panel?.previousElementSibling;
+
+    panel?.classList.remove('open');
+
+    if (toggle?.classList.contains('exercise-toggle')) {
+      toggle.setAttribute('aria-expanded', 'false');
+
+      const mark = toggle.querySelector('.exercise-toggle-mark');
+      if (mark) mark.textContent = '＋';
+    }
+  });
 })();
