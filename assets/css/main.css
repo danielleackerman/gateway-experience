@@ -940,3 +940,27 @@ h2 .ts, h3 .ts { font-size: 0.7em; }
   }
 }
 
+
+/* Exercise numbers — hover / active feedback */
+.toc .toc-ts {
+  transition:
+    color 160ms ease,
+    background 160ms ease,
+    border-color 160ms ease;
+  border: 1px solid transparent;
+  padding: 2px 5px;
+}
+
+.toc a:hover .toc-ts,
+.toc a:focus-visible .toc-ts {
+  color: #ffffff;
+  background: rgba(110, 140, 255, 0.14);
+  border-color: rgba(110, 140, 255, 0.55);
+}
+
+.toc a.active .toc-ts {
+  color: #ffffff;
+  background: rgba(110, 140, 255, 0.18);
+  border-color: var(--accent);
+}
+
