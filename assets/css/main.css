@@ -722,3 +722,34 @@ h2 .ts, h3 .ts { font-size: 0.7em; }
   color: var(--text);
 }
 
+
+/* Gateway Library — sequential vertical hierarchy */
+.library-nav.library-nav-stacked {
+  display: block;
+}
+
+.library-nav.library-nav-stacked a {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 2px 0;
+  padding: 7px 9px;
+}
+
+.library-nav.library-nav-stacked a.active {
+  border-color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.library-group-label {
+  margin: 14px 0 5px;
+  padding: 8px 9px 4px;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
