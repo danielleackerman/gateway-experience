@@ -707,3 +707,18 @@ h2 .ts, h3 .ts { font-size: 0.7em; }
   justify-content: flex-end;
 }
 
+
+/* Gateway page identity — clearer visibility */
+.doc-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.10em;
+}
+
+.doc-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--text);
+}
+
