@@ -186,5 +186,31 @@
   });
 </script>
 
+
+<!-- MOBILE INDEX TOUCH START -->
+<script>
+(() => {
+  if (!window.matchMedia('(hover: none) and (pointer: coarse)').matches) return;
+
+  document.querySelectorAll('.lecture-card[href]').forEach(card => {
+    card.addEventListener('click', event => {
+      event.preventDefault();
+
+      const href = card.href;
+
+      document.querySelectorAll('.lecture-card.touch-active')
+        .forEach(el => el.classList.remove('touch-active'));
+
+      card.classList.add('touch-active');
+
+      window.setTimeout(() => {
+        window.location.href = href;
+      }, 280);
+    });
+  });
+})();
+</script>
+<!-- MOBILE INDEX TOUCH END -->
+
 </body>
 </html>
