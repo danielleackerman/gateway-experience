@@ -29,18 +29,18 @@
 }
 
 [data-theme="light"] {
-  --bg:            #FAFAF7;
-  --bg-elevated:   #F0F0EC;
-  --bg-popup:      #FFFFFF;
-  --text:          #1A1A1F;
-  --text-muted:    #5A5A65;
-  --text-dim:      #9A9AA0;
-  --border:        #E0E0DA;
-  --border-strong: #C8C8C2;
-  --accent:        #3D5DCC;
-  --accent-dim:    #6B85DD;
-  --accent-glow:   rgba(61, 93, 204, 0.08);
-  --logic:         #8C6E2E;
+  --bg:            #E7EBF4;
+  --bg-elevated:   #DDE3EF;
+  --bg-popup:      #EEF1F7;
+  --text:          #25324D;
+  --text-muted:    #596782;
+  --text-dim:      #8290AA;
+  --border:        #C8D0DF;
+  --border-strong: #AEB9CE;
+  --accent:        #5269AD;
+  --accent-dim:    #7083B8;
+  --accent-glow:   rgba(82, 105, 173, 0.10);
+  --logic:         #796647;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -490,7 +490,7 @@ h2 .ts, h3 .ts { font-size: 0.7em; }
 .doc-footer a:hover { color: var(--text); }
 
 /* INDEX */
-.index-page { max-width: 760px; margin: 0 auto; padding: 88px 32px 200px; }
+.index-page { max-width: 760px; margin: 0 auto; padding: 28px 32px 200px; }
 .index-hero h1 {
   font-size: 38px;
   font-weight: 700;
@@ -506,22 +506,6 @@ h2 .ts, h3 .ts { font-size: 0.7em; }
   max-width: 560px;
 }
 .lecture-list { border-top: 1px solid var(--border); }
-.lecture-card {
-  display: grid;
-  grid-template-columns: 50px 1fr auto;
-  gap: 24px;
-  padding: 26px 0;
-  border-bottom: 1px solid var(--border);
-  text-decoration: none;
-  color: var(--text);
-  transition: padding-left 0.2s var(--ease);
-  align-items: baseline;
-}
-.lecture-card:hover { padding-left: 12px; }
-.lecture-card .num { font-family: var(--font-mono); font-size: 12px; color: var(--text-dim); }
-.lecture-card .lecture-title { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 5px; }
-.lecture-card .lecture-sub { font-size: 14px; color: var(--text-muted); margin: 0; }
-.lecture-card .lecture-meta { font-family: var(--font-mono); font-size: 10.5px; color: var(--text-dim); text-align: right; line-height: 1.6; }
 
 /* RESPONSIVE */
 @media (max-width: 1100px) {
@@ -544,7 +528,7 @@ h2 .ts, h3 .ts { font-size: 0.7em; }
   .toc-panel { display: none; }
   .right-col { padding: 24px 20px 160px; }
   .doc-title { font-size: 24px; }
-  .index-page { padding: 56px 20px 160px; }
+  .index-page { padding: 24px 20px 160px; }
   .index-hero h1 { font-size: 30px; }
 }
 
@@ -979,11 +963,6 @@ h2 .ts, h3 .ts { font-size: 0.7em; }
   color: var(--accent);
 }
 
-.primary-wave-list .lecture-card {
-  padding-top: 28px;
-  padding-bottom: 28px;
-}
-
 .gateway-wave-title {
   font-size: 19px;
   font-weight: 700;
@@ -998,6 +977,293 @@ h2 .ts, h3 .ts { font-size: 0.7em; }
   color: #9db2ff;
 }
 
+
+
+
+/* Gateway light-mode integration */
+[data-theme="light"] .gateway-image-hero {
+  border-color: #B8C3D8;
+  background: #DDE3EF;
+}
+
+[data-theme="light"] .exercise-toggle,
+[data-theme="light"] .gateway-page-nav a {
+  color: var(--text);
+  background: rgba(111, 128, 170, 0.08);
+  border-color: rgba(91, 108, 151, 0.30);
+}
+
+[data-theme="light"] .exercise-toggle:hover,
+[data-theme="light"] .exercise-toggle:focus-visible,
+[data-theme="light"] .gateway-page-nav a:hover,
+[data-theme="light"] .gateway-page-nav a:focus-visible {
+  color: #24365F;
+  background: rgba(111, 128, 170, 0.16);
+  border-color: rgba(82, 105, 173, 0.55);
+  box-shadow: 0 0 0 1px rgba(82, 105, 173, 0.10) inset;
+}
+
+[data-theme="light"] .gateway-page-nav .library-home {
+  color: #425A9A;
+  background: rgba(82, 105, 173, 0.10);
+  border-color: rgba(82, 105, 173, 0.42);
+}
+
+[data-theme="light"] .gateway-page-nav .library-home:hover,
+[data-theme="light"] .gateway-page-nav .library-home:focus-visible {
+  color: #263B72;
+  background: rgba(82, 105, 173, 0.18);
+  border-color: rgba(82, 105, 173, 0.65);
+}
+
+[data-theme="light"] .exercise-toggle-mark,
+[data-theme="light"] .gateway-wave-title .wave-prefix {
+  color: #5269AD;
+}
+
+[data-theme="light"] .toc a:hover .toc-ts,
+[data-theme="light"] .toc a:focus-visible .toc-ts,
+[data-theme="light"] .toc a.active .toc-ts {
+  color: #263B72;
+  background: rgba(82, 105, 173, 0.12);
+}
+
+@media (max-width: 860px) {
+  [data-theme="light"] .left-col .toc-panel {
+    border-color: rgba(91, 108, 151, 0.30);
+    background: #DDE3EF;
+  }
+}
+
+
+/* Gateway index hero */
+.gateway-index-hero {
+  margin: 0 0 48px;
+}
+
+.gateway-hero-art {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  margin: 0 0 30px;
+}
+
+.gateway-hero-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.gateway-hero-light {
+  display: none !important;
+}
+
+[data-theme="light"] .gateway-hero-dark {
+  display: none !important;
+}
+
+[data-theme="light"] .gateway-hero-light {
+  display: block !important;
+}
+
+.gateway-index-hero h1 {
+  margin: 0 0 12px;
+}
+
+.gateway-index-hero p {
+  margin: 0;
+}
+
+
+/* Gateway index title treatment — match approved mockup */
+.gateway-index-hero h1 {
+  margin: 30px auto 20px;
+  max-width: 680px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(30px, 4.2vw, 46px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.gateway-title-rule {
+  position: relative;
+  width: min(365px, 58%);
+  height: 14px;
+  margin: 0 auto 12px;
+}
+
+.gateway-title-rule::before,
+.gateway-title-rule::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  width: calc(50% - 18px);
+  height: 1px;
+  background: var(--border-strong);
+}
+
+.gateway-title-rule::before {
+  left: 0;
+}
+
+.gateway-title-rule::after {
+  right: 0;
+}
+
+.gateway-title-rule span {
+  position: absolute;
+  left: 50%;
+  top: 2px;
+  width: 9px;
+  height: 9px;
+  transform: translateX(-50%);
+  border: 1px solid var(--text-muted);
+  border-radius: 50%;
+}
+
+.gateway-index-hero p {
+  margin: 0 auto 54px;
+  max-width: 620px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+@media (max-width: 700px) {
+  .gateway-index-hero h1 {
+    font-size: 29px;
+    letter-spacing: 0.09em;
+  }
+
+  .gateway-index-hero p {
+    font-size: 16px;
+    margin-bottom: 44px;
+  }
+}
+
+
+/* Gateway index masthead */
+.gateway-masthead {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 34px;
+}
+
+.gateway-masthead-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text);
+  line-height: 1;
+}
+
+.gateway-mark {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border: 1px solid var(--accent-dim);
+  border-radius: 50%;
+}
+
+.gateway-mark::before,
+.gateway-mark::after,
+.gateway-mark span {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--accent-dim);
+}
+
+.gateway-mark::before {
+  inset: 5px;
+}
+
+.gateway-mark::after {
+  inset: 10px;
+}
+
+.gateway-mark span {
+  inset: 14px;
+  background: var(--accent);
+  border: 0;
+}
+
+@media (max-width: 600px) {
+  .gateway-masthead {
+    gap: 11px;
+    margin-bottom: 26px;
+  }
+
+  .gateway-mark {
+    width: 28px;
+    height: 28px;
+    flex-basis: 28px;
+  }
+
+  .gateway-mark::before {
+    inset: 4px;
+  }
+
+  .gateway-mark::after {
+    inset: 8px;
+  }
+
+  .gateway-mark span {
+    inset: 12px;
+  }
+
+  .gateway-masthead-title {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+  }
+}
+
+
+/* Second Gateway section — same visual treatment as first */
+.beyond-waves-label {
+  margin-top: 72px;
+}
+
+
+/* EXACT ORIGINAL INDEX CARD RULES RESTORED */
+.lecture-card {
+  display: grid;
+  grid-template-columns: 50px 1fr auto;
+  gap: 24px;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  transition: padding-left 0.2s var(--ease);
+  align-items: baseline;
+}
+
+.lecture-card:hover { padding-left: 12px; }
+
+.lecture-card .num { font-family: var(--font-mono); font-size: 12px; color: var(--text-dim); }
+
+.lecture-card .lecture-title { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 5px; }
+
+.lecture-card .lecture-sub { font-size: 14px; color: var(--text-muted); margin: 0; }
+
+.lecture-card .lecture-meta { font-family: var(--font-mono); font-size: 10.5px; color: var(--text-dim); text-align: right; line-height: 1.6; }
+
+.primary-wave-list .lecture-card {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
 .primary-wave-list .lecture-card:hover .wave-prefix,
 .primary-wave-list .lecture-card:focus-visible .wave-prefix {
   color: #ffffff;
@@ -1007,4 +1273,770 @@ h2 .ts, h3 .ts { font-size: 0.7em; }
 .primary-wave-list .lecture-card:focus-visible .gateway-wave-title {
   color: #ffffff;
 }
+
+/* ============================================================
+   INDEX CARD HOVER — CONSISTENT ACROSS BOTH SECTIONS
+   Keep original smooth movement; unify blue activation.
+   ============================================================ */
+
+.lecture-card .lecture-title,
+.lecture-card .num,
+.lecture-card .lecture-meta,
+.gateway-wave-title .wave-prefix {
+  transition: color 0.2s var(--ease);
+}
+
+.lecture-card:hover .lecture-title,
+.lecture-card:focus-visible .lecture-title {
+  color: var(--accent);
+}
+
+.lecture-card:hover .num,
+.lecture-card:focus-visible .num {
+  color: var(--accent);
+}
+
+.lecture-card:hover .lecture-meta,
+.lecture-card:focus-visible .lecture-meta {
+  color: var(--accent-dim);
+}
+
+/* Override the old Waves-only white hover so both sections behave alike */
+.primary-wave-list .lecture-card:hover .gateway-wave-title,
+.primary-wave-list .lecture-card:focus-visible .gateway-wave-title,
+.primary-wave-list .lecture-card:hover .wave-prefix,
+.primary-wave-list .lecture-card:focus-visible .wave-prefix {
+  color: var(--accent);
+}
+
+
+/* Tighten Gateway index hero spacing */
+.index-page {
+  padding-top: 16px;
+}
+
+.gateway-masthead {
+  margin-bottom: 18px;
+}
+
+.gateway-hero-art {
+  margin-bottom: 16px;
+}
+
+.gateway-index-hero h1 {
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+
+.gateway-title-rule {
+  margin-bottom: 8px;
+}
+
+.gateway-index-hero p {
+  margin-bottom: 32px;
+}
+
+@media (max-width: 700px) {
+  .index-page {
+    padding-top: 12px;
+  }
+
+  .gateway-masthead {
+    margin-bottom: 14px;
+  }
+
+  .gateway-hero-art {
+    margin-bottom: 14px;
+  }
+
+  .gateway-index-hero h1 {
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+
+  .gateway-index-hero p {
+    margin-bottom: 28px;
+  }
+}
+
+
+.gateway-index-hero p {
+  font-size: 14px;
+}
+
+
+/* Audio player — same visible shape in dark + light */
+.player-wrap.audio {
+  background: transparent;
+  border-color: transparent;
+}
+
+[data-theme="light"] .player-wrap.audio {
+  background: transparent;
+  border-color: transparent;
+}
+
+
+
+/* ============================================================
+   GATEWAY SITE MASTHEAD — LISTENING PAGES
+   ============================================================ */
+
+.gateway-site-masthead {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 22px 40px 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.gateway-site-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.gateway-site-mark {
+  position: relative;
+  width: 31px;
+  height: 31px;
+  flex: 0 0 31px;
+  border: 1px solid var(--accent-dim);
+  border-radius: 50%;
+}
+
+.gateway-site-mark::before,
+.gateway-site-mark::after,
+.gateway-site-mark span {
+  content: '';
+  position: absolute;
+  border: 1px solid var(--accent-dim);
+  border-radius: 50%;
+}
+
+.gateway-site-mark::before {
+  inset: 5px;
+}
+
+.gateway-site-mark::after {
+  inset: 10px;
+}
+
+.gateway-site-mark span {
+  inset: 13px;
+  border: 0;
+  background: var(--accent);
+}
+
+.gateway-site-masthead:hover .gateway-site-title {
+  color: var(--accent);
+}
+
+
+/* ============================================================
+   GATEWAY PLAYER
+   ============================================================ */
+
+.left-col .player-wrap.audio.gateway-player {
+  aspect-ratio: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 9px;
+  padding: 11px 12px 12px;
+  border: 1px solid rgba(123, 158, 255, 0.34);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(123, 158, 255, 0.11),
+      rgba(123, 158, 255, 0.025)
+    );
+}
+
+.gateway-player-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+
+.gateway-player-dot {
+  width: 5px;
+  height: 5px;
+  flex: 0 0 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px rgba(123, 158, 255, 0.65);
+}
+
+.left-col .gateway-player audio {
+  display: block;
+  width: 100%;
+  color-scheme: dark;
+  accent-color: var(--accent);
+}
+
+[data-theme="light"] .left-col .player-wrap.audio.gateway-player {
+  border-color: rgba(82, 105, 173, 0.34);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(82, 105, 173, 0.10),
+      rgba(112, 131, 184, 0.025)
+    );
+}
+
+[data-theme="light"] .left-col .gateway-player audio {
+  color-scheme: light;
+  accent-color: var(--accent);
+}
+
+@media (max-width: 860px) {
+  .gateway-site-masthead {
+    padding: 13px 16px 5px;
+    gap: 11px;
+  }
+
+  .gateway-site-title {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+  }
+
+  .gateway-site-mark {
+    width: 27px;
+    height: 27px;
+    flex-basis: 27px;
+  }
+
+  .gateway-site-mark::before {
+    inset: 4px;
+  }
+
+  .gateway-site-mark::after {
+    inset: 8px;
+  }
+
+  .gateway-site-mark span {
+    inset: 11px;
+  }
+
+  .left-col .player-wrap.audio.gateway-player {
+    padding: 9px 10px 10px;
+  }
+}
+
+
+/* ============================================================
+   GATEWAY PREV / NEXT NAV — COMPACT TWO-COLUMN
+   ============================================================ */
+
+.gateway-page-nav {
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.gateway-page-nav.bottom {
+  margin-top: 46px;
+  padding-top: 18px;
+}
+
+.gateway-page-nav a {
+  min-height: 34px;
+  padding: 7px 10px;
+  font-size: 10px;
+}
+
+.gateway-page-nav .next {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.gateway-page-nav .empty {
+  display: block;
+  visibility: hidden;
+}
+
+/* Keep Previous + Next on ONE ROW on narrow screens too */
+@media (max-width: 760px) {
+  .gateway-page-nav {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .gateway-page-nav .next {
+    text-align: right;
+    justify-content: flex-end;
+  }
+
+  .gateway-page-nav .empty {
+    display: block;
+    visibility: hidden;
+  }
+
+  .gateway-page-nav a {
+    min-height: 32px;
+    padding: 6px 8px;
+    font-size: 9.5px;
+  }
+}
+
+
+
+/* ============================================================
+   GATEWAY THEME CONTROL — MASTHEAD
+   ============================================================ */
+
+.gateway-masthead,
+.gateway-site-masthead {
+  justify-content: space-between;
+}
+
+.gateway-site-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.gateway-site-brand:hover .gateway-site-title {
+  color: var(--accent);
+}
+
+.gateway-theme-toggle {
+  position: static;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  padding: 0;
+  margin-left: auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border-strong);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-muted);
+
+  font-size: 0;
+  line-height: 1;
+
+  box-shadow: none;
+  outline: none;
+
+  transition:
+    color 160ms var(--ease),
+    border-color 160ms var(--ease),
+    background 160ms var(--ease),
+    box-shadow 160ms var(--ease),
+    transform 160ms var(--ease);
+}
+
+/* Dark mode shows SUN = switch to light */
+.gateway-theme-toggle::before {
+  content: '☼';
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* Light mode shows MOON = switch to dark */
+[data-theme="light"] .gateway-theme-toggle::before {
+  content: '☾';
+  font-size: 19px;
+}
+
+.gateway-theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.gateway-theme-toggle:focus,
+.gateway-theme-toggle:focus-visible {
+  outline: none !important;
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-glow);
+  box-shadow:
+    0 0 0 2px var(--bg),
+    0 0 0 3px var(--accent-dim);
+}
+
+.gateway-theme-toggle:active {
+  transform: scale(0.94);
+}
+
+@media (max-width: 600px) {
+  .gateway-site-brand {
+    gap: 11px;
+  }
+
+  .gateway-theme-toggle {
+    width: 29px;
+    height: 29px;
+    min-width: 29px;
+    flex-basis: 29px;
+  }
+
+  .gateway-theme-toggle::before {
+    font-size: 16px;
+  }
+
+  [data-theme="light"] .gateway-theme-toggle::before {
+    font-size: 17px;
+  }
+}
+
+
+/* Wave prefix must visibly participate in hover */
+.primary-wave-list .lecture-card:hover .wave-prefix,
+.primary-wave-list .lecture-card:focus-visible .wave-prefix {
+  color: var(--text);
+}
+
+
+/* ===== GATEWAY INDEX FINAL SYSTEM START ===== */
+
+/* ------------------------------------------------------------
+   INDEX SPACING
+   ------------------------------------------------------------ */
+
+.index-page {
+  padding-top: 14px;
+}
+
+
+/* ------------------------------------------------------------
+   BRAND MASTHEAD
+   ------------------------------------------------------------ */
+
+.gateway-masthead {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 0 0 16px;
+}
+
+.gateway-masthead-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+
+/* ------------------------------------------------------------
+   HERO ART — ELEGANT HAIRLINE FRAME
+   ------------------------------------------------------------ */
+
+.gateway-hero-art {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+
+  margin: 0 0 18px;
+  padding: 5px;
+
+  border: 1px solid rgba(123, 158, 255, 0.28);
+  background: rgba(123, 158, 255, 0.035);
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.025);
+}
+
+.gateway-hero-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+[data-theme="light"] .gateway-hero-art {
+  border-color: rgba(82, 105, 173, 0.30);
+  background: rgba(82, 105, 173, 0.035);
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.62);
+}
+
+[data-theme="light"] .gateway-hero-art img {
+  border-color: rgba(82, 105, 173, 0.12);
+}
+
+
+/* ------------------------------------------------------------
+   HERO TITLE
+   ------------------------------------------------------------ */
+
+.gateway-index-hero {
+  margin-bottom: 0;
+}
+
+.gateway-index-hero h1 {
+  margin: 16px auto 10px;
+  max-width: 680px;
+
+  text-align: center;
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(28px, 4.2vw, 42px);
+  font-weight: 400;
+  line-height: 1.08;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: var(--text);
+}
+
+.gateway-title-rule {
+  position: relative;
+  width: min(365px, 58%);
+  height: 14px;
+  margin: 0 auto 8px;
+}
+
+.gateway-title-rule::before,
+.gateway-title-rule::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+
+  width: calc(50% - 18px);
+  height: 1px;
+
+  background: var(--border-strong);
+}
+
+.gateway-title-rule::before {
+  left: 0;
+}
+
+.gateway-title-rule::after {
+  right: 0;
+}
+
+.gateway-title-rule span {
+  position: absolute;
+  left: 50%;
+  top: 2px;
+
+  width: 9px;
+  height: 9px;
+
+  transform: translateX(-50%);
+
+  border: 1px solid var(--text-muted);
+  border-radius: 50%;
+}
+
+.gateway-index-hero p {
+  margin: 0 auto 32px;
+  max-width: 620px;
+
+  text-align: center;
+
+  font-size: 14px;
+  line-height: 1.55;
+
+  color: var(--text-muted);
+}
+
+
+/* ------------------------------------------------------------
+   SECTION LABELS — ONE SYSTEM
+   ------------------------------------------------------------ */
+
+.gateway-wave-section-label,
+.beyond-waves-label {
+  margin: 0 0 14px;
+
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: var(--accent);
+}
+
+.beyond-waves-label {
+  margin-top: 64px;
+}
+
+
+/* ------------------------------------------------------------
+   INDEX CARDS — ONE TYPOGRAPHIC SYSTEM
+   ------------------------------------------------------------ */
+
+.lecture-card {
+  padding-top: 26px;
+  padding-bottom: 26px;
+
+  transition:
+    padding-left 0.2s var(--ease);
+}
+
+.lecture-card .lecture-title,
+.gateway-wave-title {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+
+  letter-spacing: -0.01em;
+
+  color: var(--text);
+
+  transition:
+    color 0.2s var(--ease);
+}
+
+.gateway-wave-title .wave-prefix {
+  font-family: var(--font-mono);
+  font-size: 0.72em;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  color: var(--accent-dim);
+
+  transition:
+    color 0.2s var(--ease);
+}
+
+.lecture-card .num,
+.lecture-card .lecture-meta {
+  transition:
+    color 0.2s var(--ease);
+}
+
+
+/* ------------------------------------------------------------
+   ONE HOVER SYSTEM — BOTH SECTIONS
+   ------------------------------------------------------------ */
+
+.lecture-card:hover,
+.lecture-card:focus-visible {
+  padding-left: 12px;
+  outline: none;
+}
+
+.lecture-card:hover .lecture-title,
+.lecture-card:focus-visible .lecture-title,
+.primary-wave-list .lecture-card:hover .gateway-wave-title,
+.primary-wave-list .lecture-card:focus-visible .gateway-wave-title {
+  color: var(--accent);
+}
+
+.primary-wave-list .lecture-card:hover .wave-prefix,
+.primary-wave-list .lecture-card:focus-visible .wave-prefix {
+  color: var(--accent);
+}
+
+.lecture-card:hover .num,
+.lecture-card:focus-visible .num {
+  color: var(--accent);
+}
+
+.lecture-card:hover .lecture-meta,
+.lecture-card:focus-visible .lecture-meta {
+  color: var(--accent-dim);
+}
+
+
+/* ------------------------------------------------------------
+   THEME ICON — STRONGER SUN
+   ------------------------------------------------------------ */
+
+/* Dark mode: sun means switch to light */
+.gateway-theme-toggle {
+  color: var(--accent);
+}
+
+.gateway-theme-toggle::before {
+  content: '☀';
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1;
+
+  text-shadow:
+    0 0 8px rgba(123, 158, 255, 0.32);
+}
+
+/* Light mode: moon means switch to dark */
+[data-theme="light"] .gateway-theme-toggle::before {
+  content: '☾';
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 19px;
+  font-weight: 400;
+
+  text-shadow: none;
+}
+
+
+/* ------------------------------------------------------------
+   RESPONSIVE
+   ------------------------------------------------------------ */
+
+@media (max-width: 700px) {
+  .index-page {
+    padding-top: 12px;
+  }
+
+  .gateway-masthead {
+    margin-bottom: 14px;
+  }
+
+  .gateway-hero-art {
+    margin-bottom: 14px;
+    padding: 4px;
+  }
+
+  .gateway-index-hero h1 {
+    margin-top: 14px;
+    margin-bottom: 8px;
+
+    font-size: 29px;
+    letter-spacing: 0.09em;
+  }
+
+  .gateway-index-hero p {
+    margin-bottom: 28px;
+    font-size: 14px;
+  }
+
+  .beyond-waves-label {
+    margin-top: 52px;
+  }
+}
+
+/* ===== GATEWAY INDEX FINAL SYSTEM END ===== */
 

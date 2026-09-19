@@ -36,11 +36,23 @@
 </head>
 <body data-lecture="gateway" data-asset-base="../">
 
+<nav class="gateway-site-masthead">
+  <a class="gateway-site-brand" href="../index.html">
+  <span class="gateway-site-mark" aria-hidden="true"><span></span></span>
+  <span class="gateway-site-title">The Gateway Experience</span>
+</a>
+  <button class="theme-toggle gateway-theme-toggle" type="button">LIGHT MODE</button>
+</nav>
+
 <div class="study-layout">
 
   <!-- ============ LEFT: STICKY AUDIO + TOC ============ -->
   <aside class="left-col">
-    <div class="player-wrap audio">
+    <div class="player-wrap audio gateway-player">
+      <div class="gateway-player-label">
+        <span class="gateway-player-dot"></span>
+        GATEWAY PLAYER
+      </div>
       <audio id="media-player" controls preload="none"></audio>
     </div>
     <div class="player-meta">
@@ -68,9 +80,6 @@
                 <a href="../lucid-dreaming/">Lucid Dreaming</a>
                 <a class="active" href="../mission-series/">Mission Series</a>
                 <a href="../pathways-prospecting/">Pathways / Prospecting</a>
-
-        <div class="library-group-label">Archive</div>
-                <a href="../alternates/">Alternates / Archive</a>
       </nav>
     </div>
 
@@ -99,8 +108,7 @@
 
     <div class="gateway-page-nav">
         <a href="../lucid-dreaming/">← Lucid Dreaming</a>
-        <a class="library-home" href="../index.html">GATEWAY LIBRARY</a>
-        <a class="next" href="../pathways-prospecting/">Pathways / Prospecting →</a>
+<a class="next" href="../pathways-prospecting/">Pathways / Prospecting →</a>
       </div>
 
     <header class="doc-header">
@@ -157,16 +165,13 @@
 
       <div class="gateway-page-nav bottom">
         <a href="../lucid-dreaming/">← Lucid Dreaming</a>
-        <a class="library-home" href="../index.html">GATEWAY LIBRARY</a>
-        <a class="next" href="../pathways-prospecting/">Pathways / Prospecting →</a>
+<a class="next" href="../pathways-prospecting/">Pathways / Prospecting →</a>
       </div>
 
     </article>
   </main>
 
 </div>
-
-<button class="theme-toggle">LIGHT MODE</button>
 <script src="../assets/js/player.js?v=gateway-responsive-3"></script>
 </body>
 </html>
