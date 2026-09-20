@@ -6,18 +6,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  --bg:            #13131A;
-  --bg-elevated:   #1A1A22;
-  --bg-popup:      #1E1E28;
-  --text:          #E8E8E8;
-  --text-muted:    #8A8A95;
-  --text-dim:      #5A5A65;
-  --border:        #2A2A30;
-  --border-strong: #3A3A45;
+  --bg:            #171925;
+  --bg-elevated:   #202331;
+  --bg-popup:      #272A3A;
+  --text:          #ECECF2;
+  --text-muted:    #9A9DB0;
+  --text-dim:      #686D82;
+  --border:        #303548;
+  --border-strong: #414860;
   --accent:        #7B9EFF;
-  --accent-dim:    #5A77CC;
-  --accent-glow:   rgba(123, 158, 255, 0.12);
-  --logic:         #B89968;
+  --accent-dim:    #627ED1;
+  --accent-glow:   rgba(123, 158, 255, 0.11);
+  --logic:         #B89B73;
 
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
@@ -2146,4 +2146,287 @@ h2 .ts, h3 .ts { font-size: 0.7em; }
 }
 
 /* ===== MOBILE INDEX TOUCH END ===== */
+
+
+/* ===== WAVE 1 TECH & TOOLS START ===== */
+
+/* Wave 1 doorway to the reference page */
+
+.wave-reference-link {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 5px 24px;
+
+  margin: 54px 0 18px;
+  padding: 22px 24px;
+
+  border: 1px solid var(--border-strong);
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent-glow),
+      transparent 62%
+    );
+
+  color: var(--text);
+  text-decoration: none;
+
+  transition:
+    border-color 160ms var(--ease),
+    background 160ms var(--ease),
+    transform 160ms var(--ease);
+}
+
+.wave-reference-link:hover,
+.wave-reference-link:focus-visible {
+  border-color: var(--accent);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(123, 158, 255, 0.16),
+      rgba(123, 158, 255, 0.025) 68%
+    );
+
+  outline: none;
+}
+
+.wave-reference-kicker {
+  grid-column: 1 / -1;
+
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: var(--accent);
+}
+
+.wave-reference-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.wave-reference-copy {
+  grid-column: 1;
+
+  font-size: 14px;
+  line-height: 1.55;
+
+  color: var(--text-muted);
+}
+
+.wave-reference-action {
+  grid-column: 2;
+  grid-row: 2 / 4;
+  align-self: center;
+
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: var(--accent);
+}
+
+
+/* Reference page */
+
+.gateway-reference-intro {
+  max-width: 680px;
+  margin: 0 0 42px;
+
+  font-size: 15.5px;
+  line-height: 1.65;
+
+  color: var(--text-muted);
+}
+
+.gateway-tools-outline h3 {
+  scroll-margin-top: 30px;
+}
+
+/* Elegant list treatment for Tech & Tools */
+
+.gateway-tools-outline ul {
+  list-style: none;
+  margin: 14px 0 26px;
+  padding: 0;
+}
+
+.gateway-tools-outline li {
+  position: relative;
+  margin: 0 0 16px;
+  padding-left: 27px;
+
+  font-size: 15.5px;
+  line-height: 1.72;
+  color: var(--text);
+}
+
+.gateway-tools-outline li:last-child {
+  margin-bottom: 0;
+}
+
+/* Mini Gateway portal mark — echoes the site identity */
+.outline.gateway-tools-outline > ul > li::before {
+  content: "";
+  display: block;
+
+  position: absolute;
+  left: 1px;
+  top: 0.67em;
+
+  width: 10px;
+  height: 10px;
+
+  border: 1px solid var(--text-dim);
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at center,
+      var(--accent-dim) 0 1px,
+      transparent 1.5px
+    );
+
+  opacity: 0.82;
+}
+
+[data-theme="light"] .outline.gateway-tools-outline > ul > li::before {
+  border-color: var(--text-dim);
+  background:
+    radial-gradient(
+      circle at center,
+      var(--accent-dim) 0 1px,
+      transparent 1.5px
+    );
+}
+
+/* Full Gateway Affirmation */
+
+.gateway-affirmation {
+  position: relative;
+
+  margin: 22px 0 42px;
+  padding: 30px 32px 28px;
+
+  border: 1px solid rgba(123, 158, 255, 0.34);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(123, 158, 255, 0.08),
+      rgba(123, 158, 255, 0.018) 62%
+    );
+
+  box-shadow:
+    inset 0 0 0 5px var(--bg),
+    inset 0 0 0 6px rgba(123, 158, 255, 0.10);
+}
+
+.gateway-affirmation-label {
+  margin-bottom: 21px;
+
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: var(--accent);
+}
+
+.gateway-affirmation p {
+  max-width: 720px;
+  margin: 0 0 19px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.72;
+
+  color: var(--text);
+}
+
+.gateway-affirmation p:last-child {
+  margin-bottom: 0;
+}
+
+[data-theme="light"] .gateway-affirmation {
+  border-color: rgba(82, 105, 173, 0.34);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(82, 105, 173, 0.08),
+      rgba(82, 105, 173, 0.018) 62%
+    );
+
+  box-shadow:
+    inset 0 0 0 5px var(--bg),
+    inset 0 0 0 6px rgba(82, 105, 173, 0.10);
+}
+
+
+/* Touch / narrow layout */
+
+@media (max-width: 860px) {
+
+  .wave-reference-link {
+    grid-template-columns: 1fr;
+    gap: 7px;
+
+    margin-top: 42px;
+    padding: 19px 18px;
+  }
+
+  .wave-reference-copy,
+  .wave-reference-action {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .wave-reference-action {
+    margin-top: 5px;
+  }
+
+  .gateway-affirmation {
+    margin-top: 20px;
+    padding: 25px 23px 24px;
+  }
+
+  .gateway-affirmation p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .gateway-tools-outline li {
+    padding-left: 21px;
+    margin-bottom: 14px;
+    font-size: 15px;
+  }
+
+  .gateway-tools-outline li::before {
+    width: 6px;
+    height: 6px;
+    top: 0.8em;
+  }
+
+  .reference-page .left-col {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+/* ===== WAVE 1 TECH & TOOLS END ===== */
 
